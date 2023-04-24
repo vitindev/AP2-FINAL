@@ -13,12 +13,6 @@ typedef struct
 int main()
 {
 
-    setlocale(LC_ALL, "Portuguese");
-
-    char cont;
-    int function = 0;
-    float result = 0;
-
     char name[100];
 
     system("clear");
@@ -27,6 +21,7 @@ int main()
     printf("\n\nGuardamos todos os seus calculos em um arquivo de texto para você não esquecer.");
     printf("\n\nDigite seu nome: ");
     scanf("%s", name);
+    getchar();
 
     FILE *file = fopen(strcat(name, "-lmath.txt"), "a");
 
@@ -37,11 +32,14 @@ int main()
     else
     {
 
-        if (ftell(file) == 0)
+        if (ftell(file) == 0L)
         {
             fprintf(file, "Usúario: %s", name);
             fprintf(file, "\n\nCalculos efetuados:");
         }
+
+        int function = 0;
+        float result = 0;
 
         do
         {
@@ -69,6 +67,8 @@ int main()
 
             if (getFunction(function, file, &result) != -1)
             {
+
+                char cont;
 
                 printf("\nResultado da operação: %g", result);
                 printf("\nPressione alguma tecla + Enter para continuar\n");

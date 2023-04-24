@@ -31,7 +31,7 @@ float percent(int x, int z)
 int fibonacci(int number)
 {
 
-    if (number == 0)
+    if (number < 0)
         return 0;
 
     if (number < 3)
