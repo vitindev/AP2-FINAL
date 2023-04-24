@@ -43,10 +43,26 @@ int fibonacci(int number)
 float pow(int x, int z)
 {
 
-    if (z == 0)
-        return 1;
+    float result = 1;
 
-    return (float)multiplier(x, pow(x, z - 1));
+    if (z == 0)
+    {
+        result = 1;
+    }
+    else
+    {
+
+        do
+        {
+
+            result = result * x;
+
+            z--;
+
+        } while (z != 0);
+    }
+
+    return result;
 }
 
 int combination(int x, int z)

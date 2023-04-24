@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
-#include <time.h>
 #include "lmath.h"
 
 typedef struct
@@ -268,6 +267,8 @@ void structList(structNumber *sNum, char name[])
     }
 
     printf("Lista de números: ");
+
+    ascList(sNum->numbers, sNum->tam);
 
     for (int i = 0; i < sNum->tam; i++)
         printf("%g,", sNum->numbers[i]);
