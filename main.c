@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <locale.h>
 #include "lmath.h"
 
 typedef struct
@@ -172,7 +171,7 @@ int getFunction(int function, FILE *file, float *result)
 
         *result = percent(sNum.numbers[0], sNum.numbers[1]);
 
-        fprintf(file, "\n%g% de %g resultou em: %g;", sNum.numbers[1], sNum.numbers[0], *result);
+        fprintf(file, "\n%g porcento de %g resultou em: %g;", sNum.numbers[1], sNum.numbers[0], *result);
 
         break;
 
@@ -235,7 +234,7 @@ int getFunction(int function, FILE *file, float *result)
 
         *result = fibonacci(sNum.numbers[0]);
 
-        fprintf(file, "\nO resultado na posição %d na sequencia de fibonacci resultou em: %g;", sNum.numbers[0], *result);
+        fprintf(file, "\nO resultado na posição %g na sequencia de fibonacci resultou em: %g;", sNum.numbers[0], *result);
 
         break;
 
