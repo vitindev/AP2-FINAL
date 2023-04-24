@@ -223,7 +223,7 @@ int getFunction(int function, FILE *file, float *result)
 
         *result = combination(sNum.numbers[0], sNum.numbers[1]);
 
-        fprintf(file, "\nPossibilidades de combinação de (%g em %g) resultou em: %g;", sNum.numbers[0], sNum.numbers[1], *result);
+        fprintf(file, "\nPossibilidades de combinação de (%g com %g) resultou em: %g;", sNum.numbers[0], sNum.numbers[1], *result);
 
         break;
 
